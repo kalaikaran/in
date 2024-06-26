@@ -15,7 +15,7 @@
 // console.log(flatteningArr(arr1));
 
 // arr1.map();
-// function myMap(){ 
+// function myMap(){
 //   console.log("just a test function");
 // }
 
@@ -74,7 +74,6 @@
 // setTimer();
 // setTimeout(makeAPICall, 300)
 
-
 // async function  APICall(num) {
 //   await new Promise(resolve => setTimeout(resolve, 5000))
 //   return {
@@ -101,7 +100,6 @@
 // }
 
 // toCallAPI();
-
 
 // Array.prototype.customMap = (callback) => {
 //   console.log(this);
@@ -134,18 +132,18 @@
 // const doubled = numbers.customMap(num => num * 2);
 // console.log(doubled);
 function customMap(callback) {
-  console.log(this)
+  console.log(this);
   // Create a new array to hold the results
   const result = [];
   // Iterate over each element in the array
   for (let i = 0; i < this.length; i++) {
-      // Apply the callback to each element and push the result to the new array
-      result.push(callback(this[i], i, this));
+    // Apply the callback to each element and push the result to the new array
+    result.push(callback(this[i], i, this));
   }
   // Return the new array
   return result;
-};
-const names = ['Alice', 'Bob', 'Charlie'];
+}
+const names = ["Alice", "Bob", "Charlie"];
 
 function addIndex(str, num) {
   return `${str} is at index ${num} - ${this[num]}`;

@@ -1,13 +1,13 @@
-var createCounter = function(init) {
+var createCounter = function (init) {
   const counter = init;
   const resetTo = init;
   return {
     increment: () => {
-      return counter++
+      return counter++;
     },
     decrement: () => counter--,
-    reset: () => counter = resetTo
-  }
+    reset: () => (counter = resetTo),
+  };
 };
 const counter = createCounter(5);
 console.log(counter.increment()); // 6

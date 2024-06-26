@@ -1,12 +1,12 @@
-var createCounter = function(n) {
+var createCounter = function (n) {
   let isFirst = true;
-  return function() {
-      if(isFirst) {
-        isFirst = false;
-        return n;
-      };
-      n++;
+  return function () {
+    if (isFirst) {
+      isFirst = false;
       return n;
+    }
+    n++;
+    return n;
   };
 };
 

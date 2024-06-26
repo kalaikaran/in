@@ -18,19 +18,18 @@
 //   }
 // };
 
-var compose = function(functions) {
-    
-  return function(x) {
-      let len = functions.length, init = x;
-      while (len > 0) {
-          let fn = functions.pop();
-          console.log(fn);
-          len--;
-          init = fn(init);
-      }
-      return init;
-  }
-
+var compose = function (functions) {
+  return function (x) {
+    let len = functions.length,
+      init = x;
+    while (len > 0) {
+      let fn = functions.pop();
+      console.log(fn);
+      len--;
+      init = fn(init);
+    }
+    return init;
+  };
 };
-const fn = compose([x => x + 1, x => 2 * x])
-console.log(fn(4)) // 9
+const fn = compose([(x) => x + 1, (x) => 2 * x]);
+console.log(fn(4)); // 9
