@@ -1,6 +1,6 @@
 var TimeLimitedCache = function() {
-   this.cache = {};
-   this.count = 0;
+  this.cache = {};
+  this.count = 0;
 };
 
 /** 
