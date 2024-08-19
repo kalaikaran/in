@@ -1,3 +1,8 @@
+body {
+  margin: auto;
+  width: 60%;
+}
+
 /* Hide the default radio button */
 input[type="radio"] {
   display: none;
@@ -35,25 +40,60 @@ input[type="radio"] {
 .radio-container input:checked ~ .checkmark {
   background-color: #2196F3;
 }
-
+/* form:nth-child(1) .checkmark {
+  background-color: red;
+}
+form:nth-child(2) .radio-container .checkmark:nth-child(2) {
+  background-color: yellow;
+}
+.radio-container .checkmark:nth-child(3) {
+  background-color: green;
+} */
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+/* .checkmark:after {
   content: "";
   position: absolute;
   display: none;
-}
+} */
 
 /* Show the indicator (dot/circle) when checked */
-.radio-container input:checked ~ .checkmark:after {
+/* .radio-container input:checked ~ .checkmark:after {
   display: block;
+} */
+
+.radio-container input:checked ~ span {
+  border: 1px solid brown;
 }
 
 /* Style the indicator (dot/circle) */
-.radio-container .checkmark:after {
+/* .radio-container .checkmark:after {
   top: 9px;
   left: 9px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: white;
+} */
+/* 
+image {
+  display: inline-block;
+  height: 50px;
+  width: 70px;
+} */
+
+.flex-container{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  /* position: absolute;
+  top: 20px; */
+}
+
+.flex-container div {
+  width: auto;
+}
+.flex-container div:nth-last-child(1) {
+  background-color: red;
+  width: 30px;
+  /* flex-basis: ; */
 }
