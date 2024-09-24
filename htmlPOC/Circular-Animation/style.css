@@ -1,0 +1,100 @@
+HTML CSS JSResult Skip Results Iframe
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fff;
+  background: fixed linear-gradient(transparent, #070707 70%),
+    fixed
+      repeating-linear-gradient(
+        #212121,
+        #212121 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+    fixed
+      repeating-linear-gradient(
+        to right,
+        #212121,
+        #212121 1px,
+        transparent 1px,
+        transparent 40px
+      )
+      #070707;
+  padding: 3rem 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 6rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  outline: 30px solid rgba(0, 0, 0, 0.35);
+  outline-offset: -12px;
+}
+
+.circle img {
+  background-image: url("https://images.unsplash.com/photo-1550173250-6279c71c6e9b");
+  background-size: cover;
+  background-position: top;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: inherit;
+  /* z-index: 2; */
+}
+
+.circle::before,
+.circle::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: -40px;
+  border-radius: inherit;
+  background-image: conic-gradient(#00dbde, #fc00ff, #00dbde);
+  animation: rotate 3s linear infinite;
+}
+
+.circle::after {
+  filter: blur(2rem);
+  opacity: 0.7;
+}
+
+.circle:hover::before,
+.circle:hover::after {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
