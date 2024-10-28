@@ -8,7 +8,7 @@ function numIslands(grid) {
   function bfs(grid, i, j) {
     const queue = [];
     queue.push([i, j]);
-    grid[i][j] = '0'; // Mark the cell as visited by setting it to '0'
+    grid[i][j] = "0"; // Mark the cell as visited by setting it to '0'
 
     while (queue.length > 0) {
       // console.log(queue);
@@ -17,18 +17,23 @@ function numIslands(grid) {
       // Visit all adjacent cells (up, down, left, right)
       const directions = [
         [-1, 0], // up
-        [1, 0],  // down
+        [1, 0], // down
         [0, -1], // left
-        [0, 1]   // right
+        [0, 1], // right
       ];
 
       for (const [dx, dy] of directions) {
         const newX = x + dx;
         const newY = y + dy;
-        if (newX >= 0 && newX < rows && newY >= 0 && newY < cols && grid[newX][newY] === '1') {
+        if (
+          newX >= 0 &&
+          newX < rows &&
+          newY >= 0 &&
+          newY < cols &&
+          grid[newX][newY] === "1"
+        ) {
           queue.push([newX, newY]);
-          
-          grid[newX][newY] = '0'; // Mark the cell as visited
+          grid[newX][newY] = "0"; // Mark the cell as visited
         }
       }
       console.log(queue);
@@ -37,7 +42,7 @@ function numIslands(grid) {
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      if (grid[i][j] === '1') {
+      if (grid[i][j] === "1") {
         islandCount++;
         bfs(grid, i, j);
       }
@@ -49,10 +54,10 @@ function numIslands(grid) {
 
 // Example usage
 const grid1 = [
-  ['1', '1', '0', '1', '0'],
-  ['1', '0', '0', '1', '0'],
-  ['0', '1', '0', '0', '0'],
-  ['0', '0', '0', '0', '0']
+  ["1", "1", "0", "1", "0"],
+  ["1", "0", "0", "1", "0"],
+  ["0", "1", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"],
 ];
 
 // const grid2 = [
